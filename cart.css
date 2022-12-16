@@ -75,13 +75,15 @@ body {
 
 .cart__mid {
   /* border: 1px solid red; */
+  
   width: 20%;
 }
 /* .cart__right {
   border: 1px solid red;
 } */
 .cart__right > * {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  
 }
 .cart__right__address {
   margin-top: 20px;
@@ -128,6 +130,7 @@ body {
   color: grey;
 }
 .cart__right__purchase__row_last {
-  /* border: 1px solid red; */
+  
   text-align: right;
+ 
 }
