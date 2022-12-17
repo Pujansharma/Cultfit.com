@@ -1,4 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="https://static.cure.fit/assets/images/curefit-v-man.svg" type="image/icon type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="font-awesome.min.css" />
+    <script type="text/javascript" src="login.js"></script>
+
+    <link rel="stylesheet" href="./login.css" />
+    <style>
+        
+        #padd,#new{
+            margin-top: 25px;
+        }
+        
 body{
   font-family: 'Nunito', sans-serif;
 }
@@ -13,7 +28,7 @@ body {
 }
 
 .loginContainer {
-  visibility: hidden;
+  visibility: visible;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -167,3 +182,62 @@ body {
   font-weight: bold;
   background: linear-gradient(to right, #f7433d, #fd306b);
 }
+    </style>
+    <title>Login</title>
+  </head>
+  <body>
+    <div id="loginContainer" class="loginContainer">
+      <div class="login" id="login">
+        <div class="login__cross">
+          <button >
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </button>
+        </div>
+        <img
+          src="https://static.cure.fit/assets/images/curefit_login_logo.svg"
+          alt="logo"
+        />
+        <img
+          src="https://static.cure.fit/assets/images/curefit-name.svg"
+          alt="name"
+        />
+
+        <input id="ing" type="gmail" placeholder="Enter your Email Address" />
+        <input id="padd" type="password" placeholder="Enter your phone number" />
+        <button id="new" onclick="change()" class="login__continueBtn">Continue</button>
+        <li>
+          By Continuing you agree to the
+          <em style="color: red">Terms of Services</em> and
+          <em style="color: red">Privacy policy</em>.
+        </li>
+
+        <button class="login__google" >
+          Continue with <i class="fa fa-google" aria-hidden="true"></i>
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+    
+  </body>
+</html>
+<script>
+    
+    
+    let flag=false;
+    function change(){
+        let username=document.querySelector("#ing").value;
+        let userpass=document.querySelector("#padd").value;
+        if( username==="pujan@gmail.com"){
+            if(userpass==="1234"&&userpass<2){
+              window.location.href="adminlogin.html"
+            }else{
+              alert("Wrong Password");
+            }
+        }else{
+          alert("Email Not Found");
+        }
+        
+       
+    }
+</script>
